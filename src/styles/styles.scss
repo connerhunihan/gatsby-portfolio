@@ -1,0 +1,389 @@
+$font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+//Colors
+$white: #fff;
+$black: #000;
+$gray: #c0c0c0;
+$maroon: #83333e;
+$off-white: #f2f4f5;
+
+html,
+body {
+  font-family: $font;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1640px;
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  min-width: 1640px;
+  margin: 0 auto;
+  @media (max-width: 1440px) {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @media (max-width: 1280px) {
+    width: 976px;
+    min-width: 976px;
+  }
+  @media (max-width: 976px) {
+    width: 768px;
+    min-width: 768px;
+  }
+}
+
+//Header
+header {
+  height: 80px;
+  z-index: 10;
+
+  .inner-header {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    .logo {
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 1.75px;
+        color: $black;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          font-weight: 600;
+          margin: 0 20px;
+          text-decoration: none;
+          letter-spacing: 1.75px;
+          text-transform: uppercase;
+          color: $black;
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Bannner
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  position: relative;
+  height: 75vh;
+  .row {
+    position: relative;
+
+    .main-text {
+      font-size: 1.953rem;
+      letter-spacing: 1px;
+      font-weight: 100;
+      color: $white; //need to set this, in order to callibrate mix-blend-mode
+      width: 45%;
+      transform: translateY(-100%);
+      mix-blend-mode: difference;
+      z-index: 9;
+      @media (max-width: 1440px) {
+        line-height: 2.441rem;
+        font-weight: 100;
+        font-size: 1.953rem;
+        letter-spacing: 2.5px;
+      }
+    }
+    // .main-image {
+    //   width: 536px;
+    //   margin: 0 auto;
+    //   @media (max-width: 1440px) {
+    //     width: 436px;
+    //   }
+    // }
+    // .side-image {
+    //   width: 260px;
+    //   position: absolute;
+    //   @media (max-width: 1440px) {
+    //     width: 208px;
+    //   }
+    //   &.left {
+    //     left: 168px;
+    //     top: 12px;
+    //     @media (max-width: 1440px) {
+    //       left: 128px;
+    //     }
+    //   }
+    //   &.right {
+    //     right: 168px;
+    //     bottom: 12px;
+    //     @media (max-width: 1440px) {
+    //       right: 128px;
+    //     }
+    //   }
+    //   }
+    // }
+    // .scroll {
+    //   font-weight: 700;
+    //   font-size: 0.875rem;
+    //   letter-spacing: 1.5px;
+    //   color: $black;
+    //   text-transform: uppercase;
+    //   position: absolute;
+    //   bottom: 48px;
+    // }
+    // .fixed-misc {
+    //   position: fixed;
+    //   top: 50%;
+    //   right: -48px;
+    //   transform: rotate(-90deg);
+    //   font-weight: 700;
+    //   text-transform: uppercase;
+    //   font-size: 0.875rem;
+    //   letter-spacing: 1.5px;
+    //   color: $white;
+    //   mix-blend-mode: difference;
+    //   z-index: 8;
+    //   @media (max-width: 1440px) {
+    //     right: -50px;
+    //   }
+    // }
+  }
+}
+
+//About blurb
+// .about-blurb {
+//   padding: 48px 0; // top/bottom left/right
+//   background: $white;
+//   position: relative;
+
+//   .inner-blurb {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     .content {
+//       width: 33%;
+//       @media (max-width: 1440px) {
+//         width: 40%;
+//       }
+//       h3 {
+//         font-weight: 700;
+//         text-transform: uppercase;
+//         letter-spacing: 1.5px;
+//         font-size: 1.8rem;
+//         margin: 0;
+//       }
+//       p {
+//         font-size: 1rem;
+//         line-height: 2rem;
+//         font-weight: 300;
+//         margin: 40px 0 72px; // top left/right bottom
+//       }
+//       .btn-row {
+//         a {
+//           font-weight: 700;
+//           font-size: 0.875rem;
+//           letter-spacing: 1.5px;
+//           color: $black;
+//           text-transform: uppercase;
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//     .images {
+//       width: 50%;
+//       height: 1000px;
+//       position: relative;
+//       z-index: 7;
+//       @media (max-width: 1440px) {
+//         height: 800px;
+//       }
+//       .top-right {
+//         position: absolute;
+//         width: 460px;
+//         top: 0;
+//         right: 0;
+//         z-index: 4;
+//         @media (max-width: 1440px) {
+//           width: 360px;
+//         }
+//       }
+//       .bottom-left {
+//         display: relative;
+//         width: 410px;
+//         left: 0;
+//         bottom: 0;
+//         @media (max-width: 1440px) {
+//           width: 210px;
+//         }
+//       }
+//     }
+//   }
+//   .black-box {
+//     background: $black;
+//     height: 418px;
+//     width: 836px;
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     &.overlay {
+//       z-index: 7;
+//       background: $maroon;
+//       mix-blend-mode: overlay;
+//       @media (max-width: 1440px) {
+//         width: 636px;
+//         height: 340px;
+//       }
+//     }
+//   }
+// }
+
+// //Images
+// .hero-images {
+//   padding: 48px 0; // top/bottom left/right
+//   background: $white;
+//   position: relative;
+//   .row {
+//     display: flex;
+//     flex-wrap: wrap;
+//     padding: 0 4px;
+//   }
+
+//   /* Create four equal columns that sits next to each other */
+//   .column {
+//     flex: 50%;
+//     max-width: 50%;
+//   }
+
+//   .image {
+//     margin-top: 8px;
+//     vertical-align: middle;
+//     width: 100%;
+//   }
+
+//   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+//   @media screen and (max-width: 600px) {
+//     .column {
+//       flex: 100%;
+//       max-width: 100%;
+//     }
+//   }
+// }
+
+//Project List
+.project-list {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: $white;
+
+  .box-wrapper {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 25px;
+    color: $white;
+
+    .project {
+      background-color: $white;
+      color: #fff;
+      a {
+        text-decoration: none;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 1.25em;
+        letter-spacing: 1.3px;
+        color: $black;
+      }
+      p {
+        font-size: 1.25rem;
+        letter-spacing: 1.3px;
+        line-height: 1.6rem;
+        font-weight: 200;
+        color: $black;
+      }
+    }
+  }
+}
+
+//Subfooter
+.link-list {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: $white;
+
+  .link-wrapper {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 25px;
+    color: $white;
+
+    .link {
+      background-color: $white;
+      color: #fff;
+      a {
+        text-decoration: none;
+      }
+
+      h3 {
+        font-weight: 100;
+        font-size: 1.953rem;
+        letter-spacing: 1px;
+        color: $black;
+        color: $white; //need to set this, in order to callibrate mix-blend-mode
+        width: 45%;
+        transform: translateY(-100%);
+        mix-blend-mode: difference;
+        z-index: 9;
+        @media (max-width: 1440px) {
+          line-height: 2.441rem;
+          font-weight: 100;
+          font-size: 1.953rem;
+          letter-spacing: 2.5px;
+        }
+      }
+    }
+  }
+}
+
+//Footer
+.footer {
+  position: fixed;
+  height: 80px;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  background-color: $white;
+  align-items: center;
+
+  .inner-footer {
+    background-color: $white;
+    text-align: center;
+    height: 80px;
+    .footer-content {
+      color: $gray;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
+}
